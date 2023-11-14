@@ -14,10 +14,12 @@ type User = {
   password: string;
 }
 
-function createOrUpdateUser(initialValues: User) {
+type UserUpdate = Pick<User, 'email' | 'password'>;
+
+function createOrUpdateUser(initialValues: UserUpdate) {
   // Оновлення користувача
 }
 
 createOrUpdateUser({ email: 'user@mail.com', password: 'password123' });
 
-export {};
+export { };
