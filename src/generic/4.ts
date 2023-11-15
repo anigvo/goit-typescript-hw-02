@@ -5,15 +5,13 @@
 interface PropsComponent {
   title: string;
 }
-class Component<T extends PropsComponent>{
+class Component<T>{
   constructor(public props: T) {
 
   }
 }
 
-class Page extends Component<{
-  title: string
-}> {
+class Page extends Component<PropsComponent> {
   pageInfo() {
     console.log(this.props.title);
   }
